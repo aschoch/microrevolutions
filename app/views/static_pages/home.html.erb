@@ -1,5 +1,21 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/project_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Project Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>  
+<% else %>
 <div class="center hero-unit">
-  <h1>Welcome to MicroRevolutions</h1>
+  <h1 id="home-title">Welcome to MicroRevolutions</h1>
 
   <h2>
     Do you want to <b>Change the World</b>? Do you have ...?
@@ -14,3 +30,4 @@
 
   <div class="button"><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %></div>
 </div>
+<% end %>
