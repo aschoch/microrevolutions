@@ -78,6 +78,7 @@ p {
   &:hover {
     color: white;
     text-decoration: none;
+    background-color: none;
   }
 }
 
@@ -137,6 +138,12 @@ footer {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+.button{
+  a{
+    color: white;
+  }
 }
 
 /* sidebar */
