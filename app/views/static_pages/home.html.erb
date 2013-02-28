@@ -2,10 +2,15 @@
   <h1>Welcome to MicroRevolutions</h1>
 
   <h2>
-    This is the home page of the MicroRevolutions' Social Network.
+    Do you want to <b>Change the World</b>? Do you have ...?
   </h2>
+  <ul class="icons_home">
+  	<li><%= image_tag ("bulb.png")%><h2>Idea</h2></li>
+  	<li><%= image_tag ("clock.png")%><h2>Time</h2></li>
+  	<li><%= image_tag ("money.png")%><h2>Money</h2></li>
+  	<li><%= image_tag ("contacts.png")%><h2>Contacts</h2></li>
+  </ul>
+  <br>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
