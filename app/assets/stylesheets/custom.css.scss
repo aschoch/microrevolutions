@@ -179,6 +179,18 @@ aside {
   margin-right: 10px;
 }
 
+.user_image{
+  float: left;
+  margin-right: 10px;
+  height:52px;
+  width:52px;
+}
+
+.thumbs{
+  height:30px;
+  width:30px; 
+}
+
 .stats {
   overflow: auto;
   a {
@@ -203,7 +215,7 @@ aside {
 .user_avatars {
   overflow: auto;
   margin-top: 10px;
-  .gravatar {
+  .thumbs {
     margin: 1px 1px;
   }
 }
@@ -261,7 +273,21 @@ input {
     border-top: 1px solid #e8e8e8;
   }
 }
+.title {
+  font-weight: bold;
+  display: block;
+}
 .content {
+  display: block;
+}
+.description {
+  display: block;
+}
+.city {
+  display: block;
+}
+.tags {
+  color: #003366;
   display: block;
 }
 .timestamp {

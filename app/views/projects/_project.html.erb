@@ -1,6 +1,7 @@
 <li>
-  <span class="title"><%= project.title %></span>
+  <span class="title"><%= link_to project.title, project %></span>
   <span class="content"><%= project.content %></span>
+  <span class="city"><%= project.city %></span>
   <span class="tags"><%= project.tags %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(project.created_at) %> ago.
@@ -9,5 +10,7 @@
     <%= link_to "delete", project, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: project.content %>
+  <% else %>
+  Join
   <% end %>
 </li>

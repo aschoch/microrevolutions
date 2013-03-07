@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, @project.title) %>
 
 <p>
   <b>Title:</b>
@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <b>Description:</b>
+  <%= @project.description %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @project.city %>
+</p>
+
+<p>
   <b>Tags:</b>
   <%= @project.tags %>
 </p>
@@ -19,7 +29,3 @@
   <b>User:</b>
   <%= @project.user_id %>
 </p>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>

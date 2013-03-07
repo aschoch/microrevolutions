@@ -2,7 +2,9 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_field :title, placeholder: "Title" %>
-    <%= f.text_area :content, placeholder: "Tell us more about this project..." %>
+    <%= f.text_area :content, placeholder: "Give a small description, less than 140 characters" %>
+    <%= f.text_area :description, placeholder: "Tell us more about this project..." %>
+    <%= f.text_field :city, placeholder: "City" %>
     <%= f.text_field :tags, placeholder: "Enter tags separated by '#' (#hunger #art ...)" %>
   </div>
   <%= f.submit "Start MicroRevolution", class: "btn btn-large btn-primary" %>

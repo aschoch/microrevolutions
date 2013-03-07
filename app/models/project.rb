@@ -1,9 +1,9 @@
 class Project < ActiveRecord::Base
-  attr_accessible :content, :tags, :title
+  attr_accessible :content, :tags, :title, :city, :description
   
   belongs_to :user
   
-  #validates :content, presence: true, length: { maximum: 140 }
+  validates :content, presence: true, length: { maximum: 140 }
   validates :user_id, presence: true
   
   def self.from_users_followed_by(user)

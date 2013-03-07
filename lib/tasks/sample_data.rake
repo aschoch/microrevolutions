@@ -29,8 +29,14 @@ def make_projects
   50.times do |n|
     title = "Project-#{n+1}"
     content = Faker::Lorem.sentence(5)
-    tags = "#sample #madrid"
-    users.each { |user| user.projects.create!(title: title, content: content, tags: tags) }
+    description = Faker::Lorem.paragraph(5)
+    city = "Madrid"
+    tags = "#sample #hunger #art"
+    users.each { |user| user.projects.create!(title: title,
+                                              content: content, 
+                                              description: description, 
+                                              city: city,
+                                              tags: tags) }
   end
 end
 
