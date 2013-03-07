@@ -2,11 +2,8 @@
   <%= link_to image_tag(current_user.image.url, :class => 'user_image'), current_user %>
 </a>
 <h1>
-  <%= current_user.name %>
+  <%= link_to current_user.name, current_user %>
 </h1>
 <span>
   <%= link_to "view my profile", current_user %>
-</span>
-<span>
-  <%= pluralize(current_user.projects.count, "project") %>
 </span>
