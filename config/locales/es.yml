@@ -29,6 +29,26 @@ es:
     in: "en"
     delete: "Eliminar"
 
+  header:
+    links:
+      home: "Inicio"
+      help: "Ayuda"
+      users: "Usuarios"
+      account: "Cuenta"
+      profile: "Perfil"
+      settings: "Configuración"
+      sign_out: "Salir"
+      sign_in: "Entrar"
+
+  footer:
+    links:
+      about: "Sobre nosotros"
+      contact: "Contacto"
+
+  will_paginate:
+    next_label: "Siguiente"
+    previous_label: "Anterior"
+
   date:
     abbr_day_names:
     - dom
