@@ -9,6 +9,10 @@
     <section>
       <%= render 'shared/participants' %>
     </section>
+    <section>
+      Microrevolution started by:<br>
+      <%=  link_to User.find(@project.user_id).name, User.find(@project.user_id)%>
+    </section>
   </aside>
 
   <div class="span8">

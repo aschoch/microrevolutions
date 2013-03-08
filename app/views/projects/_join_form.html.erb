@@ -1,4 +1,4 @@
-<% unless current_user?(@project.user) %>
+<% unless current_user?(@project.user)%>
   <div id="join_form">
   <% if current_user.joined?(@project) %>
     <%= render 'unjoin' %>
