@@ -12,25 +12,23 @@
       </section>
     </aside>
     <div class="span8">
-      <h3>Project Feed</h3>
+      <h3><%= t "home.project_feed" %></h3>
       <%= render 'shared/feed' %>
     </div>
   </div>  
 <% else %>
 <div class="center hero-unit">
-  <h1 id="home-title">Welcome to MicroRevolutions</h1>
+  <h1 id="home-title"><%= t "welcome.title"%></h1>
 
-  <h2>
-    Do you want to <b>Change the World</b>? Do you have ...?
-  </h2>
+  <h2><%= t "welcome.text" %></h2>
   <ul class="icons_home">
-  	<li><%= image_tag ("bulb.png")%><h2>Idea</h2></li>
-  	<li><%= image_tag ("clock.png")%><h2>Time</h2></li>
-  	<li><%= image_tag ("money.png")%><h2>Money</h2></li>
-  	<li><%= image_tag ("contacts.png")%><h2>Contacts</h2></li>
+  	<li><%= image_tag ("bulb.png")%><h2><%= t "welcome.options.idea" %></h2></li>
+  	<li><%= image_tag ("clock.png")%><h2><%= t "welcome.options.time" %></h2></li>
+  	<li><%= image_tag ("money.png")%><h2><%= t "welcome.options.money" %></h2></li>
+  	<li><%= image_tag ("contacts.png")%><h2><%= t "welcome.options.contacts" %></h2></li>
   </ul>
   <br>
 
-  <div class="button"><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %></div>
+  <div class="button"><%= link_to t("welcome.signup"), signup_path, class: "btn btn-large btn-primary" %></div>
 </div>
 <% end %>

@@ -3,8 +3,27 @@
 
 en:
   hello: "Hello world"
-en:
+  signup: "Sign up now!"
+
   activerecord:
     attributes:
       user:
         password_digest: "Password"
+
+  welcome:
+    title: "Welcome to MicroRevolutions"
+    text: "Do you want to change the World? Do you have ...?"
+    options:
+      idea: "Idea"
+      time: "Time"
+      money: "Money"
+      contacts: "Contacts"
+    signup: "Sign up now!"
+
+  home:
+    project_feed: "Project feed"
+
+  feed_item:
+    posted: "Posted"
+    ago: "ago"
+    in: "in"
