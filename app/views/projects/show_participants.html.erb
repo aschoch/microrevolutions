@@ -1,0 +1,22 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1><%= link_to @project.title, @project %></h1>
+      <span><%= link_to "view this project", @project %></span>
+      <span><b>Participants:</b> <%= @project.participants.count %></span>
+    </section>
+    <section>
+      Here we'll have the information about the participants and the owner...
+    </section>
+  </aside>
+  <div class="span8">
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <ul class="users">
+        <%= render @users %>
+      </ul>
+      <%= will_paginate @users%>
+    <% end %>
+  </div>
+</div>

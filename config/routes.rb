@@ -1,17 +1,22 @@
 Microrevolutions::Application.routes.draw do
 
-  resources :projects
+  resources :projects do
+    member do
+      get :participants
+    end
+  end
 
 
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers, :joined_projects
     end
   end
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :projects, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :participations, only: [:create, :destroy]
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

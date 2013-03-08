@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
   has_attached_file :image, :default_url => "no-avatar.png"
   has_many :projects, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :participations, foreign_key: "participant_id", dependent: :destroy
+  has_many :joined_projects, through: :participations, source: :project
   has_many :followed_users, through: :relationships, source: :followed
 
   has_many :reverse_relationships, foreign_key: "followed_id",
@@ -37,6 +39,18 @@ class User < ActiveRecord::Base
 
   def follow!(other_user)
     relationships.create!(followed_id: other_user.id)
+  end
+
+  def joined?(project)
+    participations.find_by_project_id(project.id)
+  end
+
+  def join!(project)
+    participations.create!(project_id: project.id)
+  end
+
+  def unjoin!(project)
+    participations.find_by_project_id(project.id).destroy
   end
 
   def unfollow!(other_user)

@@ -4,6 +4,7 @@ namespace :db do
     make_users
     make_projects
     make_relationships
+    make_participations
   end
 end
 
@@ -47,4 +48,15 @@ def make_relationships
   followers      = users[3..40]
   followed_users.each { |followed| user.follow!(followed) }
   followers.each      { |follower| follower.follow!(user) }
+end
+
+def make_participations
+  users = User.all
+  projects = Project.all
+  user  = users.first
+  project = projects.first
+  joined_projects = projects[2..50]
+  participants      = users[3..40]
+  joined_projects.each { |project| user.join!(project) }
+  participants.each      { |participant| participant.join!(user) }
 end

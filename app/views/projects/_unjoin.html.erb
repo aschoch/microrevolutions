@@ -1,0 +1,5 @@
+<%= form_for(current_user.participations.find_by_project_id(@project),
+             html: { method: :delete },
+             remote: true) do |f| %>
+  <%= f.submit "Unjoin", class: "btn btn-large" %>
+<% end %>

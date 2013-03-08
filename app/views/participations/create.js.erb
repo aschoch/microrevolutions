@@ -1,0 +1,2 @@
+$("#join_form").html("<%= escape_javascript(render('projects/unjoin')) %>")
+$("#participants").html('<%= @project.participants.count %>')

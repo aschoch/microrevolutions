@@ -1,8 +1,8 @@
 <% @user ||= current_user %>
 <div class="stats">
-  <a href="<%= user_path(current_user) %>">
+  <a href="<%= joined_projects_user_path(@user) %>">
     <strong id="projects" class="stat">
-      <%= @user.projects.count %>
+      <%= @user.joined_projects.count %>
     </strong>
     projects
   </a>

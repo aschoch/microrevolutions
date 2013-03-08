@@ -56,6 +56,13 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def joined_projects
+    @title = "Joined projects"
+    @user = User.find(params[:id])
+    @projects = @user.joined_projects.paginate(page: params[:page])
+    render 'show_projects'
+  end
+
   def followers
     @title = "Followers"
     @user = User.find(params[:id])

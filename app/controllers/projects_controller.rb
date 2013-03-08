@@ -17,6 +17,13 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def participants
+    @title = "Participants"
+    @project = Project.find(params[:id])
+    @users = @project.participants.paginate(page: params[:page])
+    render 'show_participants'
+  end
+
   def destroy
     @project.destroy
     redirect_to root_url

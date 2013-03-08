@@ -1,31 +1,48 @@
 <% provide(:title, @project.title) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @project.title %>
+      </h1>
+    </section>
+    <section>
+      <%= render 'shared/participants' %>
+    </section>
+  </aside>
 
-<p>
-  <b>Title:</b>
-  <%= @project.title %>
-</p>
+  <div class="span8">
+    <%= render 'join_form' if signed_in? %>
+    
+    <p>
+      <b>Title:</b>
+      <%= @project.title %>
+    </p>
 
-<p>
-  <b>Content:</b>
-  <%= @project.content %>
-</p>
+    <p>
+      <b>Content:</b>
+      <%= @project.content %>
+    </p>
 
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
+    <p>
+      <b>Description:</b>
+      <%= @project.description %>
+    </p>
 
-<p>
-  <b>City:</b>
-  <%= @project.city %>
-</p>
+    <p>
+      <b>City:</b>
+      <%= @project.city %>
+    </p>
 
-<p>
-  <b>Tags:</b>
-  <%= @project.tags %>
-</p>
+    <p>
+      <b>Tags:</b>
+      <%= @project.tags %>
+    </p>
 
-<p>
-  <b>User:</b>
-  <%= @project.user_id %>
-</p>
+    <p>
+      <b>Owner:</b>
+      <%= User.find(@project.user_id).name %>
+    </p>
+
+  </div>
+</div>
