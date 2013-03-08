@@ -27,6 +27,7 @@ es:
     posted: "Publicado hace"
     ago: ""
     in: "en"
+    delete: "Eliminar"
 
   date:
     abbr_day_names:
