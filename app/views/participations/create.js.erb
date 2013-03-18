@@ -1,2 +1,3 @@
 $("#join_form").html("<%= escape_javascript(render('projects/unjoin')) %>")
 $("#participants").html('<%= @project.participants.count %>')
+$("#participants_label").html('<%= pluralize_without_count(@project.participants.count, t("stats.participants")) %>')

@@ -4,18 +4,18 @@
     <strong id="projects" class="stat">
       <%= @user.joined_projects.count %>
     </strong>
-    projects
+    <span id="projects_label"><%= pluralize_without_count(@user.joined_projects.count, t("stats.projects")) %></span>
   </a>
   <a href="<%= following_user_path(@user) %>">
     <strong id="following" class="stat">
       <%= @user.followed_users.count %>
     </strong>
-    following
+    <span id="following_label"><%= t "stats.following" %></span>
   </a>
   <a href="<%= followers_user_path(@user) %>">
     <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>
-    followers
+    <span id="followers_label"><%= pluralize_without_count(@user.followers.count , t("stats.followers")) %></span>
   </a>
 </div>

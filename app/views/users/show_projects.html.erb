@@ -4,8 +4,8 @@
     <section>
       <%= link_to image_tag(@user.image.url, :class => 'user_image'), @user %>
       <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Projects:</b> <%= @user.joined_projects.count %></span>
+      <span><%= link_to t("user.profile"), @user %></span>
+      <span><b><%= t "user.projects" %>:</b> <%= @user.joined_projects.count %></span>
     </section>
     <section>
       <%= render 'shared/stats' %>

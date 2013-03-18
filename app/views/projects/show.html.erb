@@ -10,7 +10,7 @@
       <%= render 'shared/participants' %>
     </section>
     <section>
-      Microrevolution started by:<br>
+      <%= t "project.started" %><br>
       <%=  link_to User.find(@project.user_id).name, User.find(@project.user_id)%>
     </section>
   </aside>

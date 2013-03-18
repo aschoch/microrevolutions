@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.projects.build(params[:project])
     if @project.save
-      flash[:success] = "Project created!"
+      flash[:success] = t("confirm.project_created")
       redirect_to root_url
     else
       @feed_items = []
@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
   end
 
   def participants
-    @title = "Participants"
+    @title = t("project.participants")
     @project = Project.find(params[:id])
     @users = @project.participants.paginate(page: params[:page])
     render 'show_participants'

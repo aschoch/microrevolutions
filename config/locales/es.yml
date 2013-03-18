@@ -45,6 +45,50 @@ es:
       about: "Sobre nosotros"
       contact: "Contacto"
 
+  buttons:
+    join: "Unirse"
+    unjoin: "Abandonar"
+    start: "Empezar una MicroRevolution"
+    follow: "Seguir"
+    unfollow: "Dejar de seguir"
+
+  confirm:
+    sure: "¿Estás seguro?"
+    delete: "Eliminar"
+    created: "¡Bienvenido a MicroRevolutions! Tu perfil se ha creado satisfactoriamente"
+    project_created: "Proyecto creado"
+    updated: "Hemos guardado los cambios"
+    destroyed: "Usuario eliminado"
+    wrong_pwd: "Combinación email/contraseña inválida"
+
+  error:
+    intro: "Este formulario contiene"
+    error: "error"
+
+  stats:
+    participants: "participante"
+    followers: "seguidor"
+    following: "siguiendo"
+    projects: "proyecto"
+
+  project:
+    started: "MicroRevolution empezada por:"
+    participants: "Participantes"
+    view_project: "ver este proyecto"
+    form_title: "Título"
+    form_content: "Danos una pequeña descripción de tu proyeto en menos de 140 caracteres"
+    form_description: "Cuéntanos más sobre tu proyecto..."
+    form_city: "Ciudad"
+    form_tags: "Tags separados por '#' (#pobreza #arte ...)"
+
+  user:
+    myprofile: "ver mi perfil"
+    profile: "ver perfil"
+    projects: "Proyectos"
+    following: "Siguiendo"
+    followers: "Seguidores"
+    joined_projects: "Proyectos a los que se ha unido"
+
   will_paginate:
     next_label: "Siguiente"
     previous_label: "Anterior"

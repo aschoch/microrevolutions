@@ -4,6 +4,6 @@
     <strong id="participants" class="stat">
       <%= @project.participants.count %>
     </strong>
-    participants
+    <span id="participants_label"><%= pluralize_without_count(@project.participants.count, t("stats.participants")) %></span>
   </a>
 </div>

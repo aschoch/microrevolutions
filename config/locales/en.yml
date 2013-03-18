@@ -44,3 +44,47 @@ en:
     links:
       about: "About"
       contact: "Contact"
+
+  buttons:
+    join: "Join"
+    unjoin: "Unjoin"
+    start: "Start a MicroRevolution"
+    follow: "Follow"
+    unfollow: "Unfollow"
+
+  confirm:
+    sure: "You sure?"
+    delete: "Delete"
+    created: "Welcome to MicroRevolutions! Your profile was succesfully created"
+    project_created: "Project created!"
+    updated: "Profile updated!"
+    destroyed: "User destroyed!"
+    wrong_pwd: "Invalid email/password combination"
+
+  error:
+    intro: "The form contains"
+    error: "error"
+
+  stats:
+    participants: "participant"
+    followers: "follower"
+    following: "following"
+    projects: "project"
+
+  project:
+    started: "MicroRevolution started by:"
+    participants: "Participants"
+    view_project: "view this project"
+    form_title: "Title"
+    form_content: "Give a small description, less than 140 characters"
+    form_description: "Tell us more about this project..."
+    form_city: "City"
+    form_tags: "Enter tags separated by '#' (#hunger #art ...)"
+
+  user:
+    myprofile: "view my profile"
+    profile: "view profile"
+    projects: "Projects"
+    following: "Following"
+    followers: "Followers"
+    joined_projects: "Joined projects"
