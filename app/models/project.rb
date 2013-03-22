@@ -18,5 +18,17 @@ class Project < ActiveRecord::Base
           user_id: user.id)
   end
 
+  def self.search(search, src)
+    if search
+      if src == "city"
+        find(:all, :conditions => ["#{src} LIKE ?", "#{search}"])
+      else
+        find(:all, :conditions => ["#{src} LIKE ?", "%#{search}%"])
+      end
+    else
+      find(:all)
+    end
+  end
+
   default_scope order: 'projects.created_at DESC'
 end

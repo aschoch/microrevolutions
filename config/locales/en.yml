@@ -33,6 +33,7 @@ en:
     links:
       home: "Home"
       help: "Help"
+      projects: "Projects"
       users: "Users"
       account: "Account"
       profile: "Profile"
@@ -74,6 +75,8 @@ en:
   project:
     started: "MicroRevolution started by:"
     participants: "Participants"
+    search_by: "Search by"
+    city: "city"
     view_project: "view this project"
     form_title: "Title"
     form_content: "Give a small description, less than 140 characters"
@@ -88,3 +91,6 @@ en:
     following: "Following"
     followers: "Followers"
     joined_projects: "Joined projects"
+
+  search:
+    results: "Projects in"

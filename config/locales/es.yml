@@ -33,6 +33,7 @@ es:
     links:
       home: "Inicio"
       help: "Ayuda"
+      projects: "Proyectos"
       users: "Usuarios"
       account: "Cuenta"
       profile: "Perfil"
@@ -74,6 +75,8 @@ es:
   project:
     started: "MicroRevolution empezada por:"
     participants: "Participantes"
+    search_by: "Buscar por"
+    city: "ciudad"
     view_project: "ver este proyecto"
     form_title: "Título"
     form_content: "Danos una pequeña descripción de tu proyeto en menos de 140 caracteres"
@@ -88,6 +91,9 @@ es:
     following: "Siguiendo"
     followers: "Seguidores"
     joined_projects: "Proyectos a los que se ha unido"
+
+  search:
+    results: "Proyectos en"
 
   will_paginate:
     next_label: "Siguiente"

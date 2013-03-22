@@ -29,7 +29,6 @@ class User < ActiveRecord::Base
   before_save :create_remember_token
 
   def feed
-    # This is preliminary. See "Following users" for the full implementation.
     Project.from_users_followed_by(self)
   end
 

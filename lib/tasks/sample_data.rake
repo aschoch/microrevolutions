@@ -26,18 +26,20 @@ def make_users
 end
 
 def make_projects
-  users = User.all(limit: 6)
-  50.times do |n|
+  users = User.all(limit: 20)
+  5.times do |n|
     title = "Project-#{n+1}"
-    content = Faker::Lorem.sentence(5)
-    description = Faker::Lorem.paragraph(5)
     city = "Madrid"
     tags = "#sample #hunger #art"
-    users.each { |user| user.projects.create!(title: title,
+    users.each { |user| content = Faker::Lorem.sentence(5)
+                  description = Faker::Lorem.paragraph(5) 
+                  user.projects.create!(title: title,
                                               content: content, 
                                               description: description, 
                                               city: city,
-                                              tags: tags) }
+                                              tags: tags)
+
+                  }
   end
 end
 

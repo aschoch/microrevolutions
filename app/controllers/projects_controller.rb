@@ -13,6 +13,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def index
+    @projects = Project.search(params[:search], params[:src])
+  end
+
   def show
     @project = Project.find(params[:id])
   end

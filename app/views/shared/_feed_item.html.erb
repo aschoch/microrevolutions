@@ -8,7 +8,7 @@
     <span class="content"><%= feed_item.content %></span>
     <span class="tags"><%= feed_item.tags %></span>
     <span class="timestamp">
-      <%= t "feed_item.posted" %> <%= time_ago_in_words(feed_item.created_at) %> <%= t "feed_item.ago" %> <%= t "feed_item.in" %> <%= link_to feed_item.city, feed_item.user %>.
+      <%= t "feed_item.posted" %> <%= time_ago_in_words(feed_item.created_at) %> <%= t "feed_item.ago" %> <%= t "feed_item.in" %> <%= link_to feed_item.city, projects_path + "?utf8=✓&src=city&search=" + feed_item.city %>.
     </span>
     <% if current_user?(feed_item.user) %>
       <%= link_to t("feed_item.delete"), feed_item, method: :delete,

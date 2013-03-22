@@ -4,13 +4,11 @@
   <span class="city"><%= project.city %></span>
   <span class="tags"><%= project.tags %></span>
   <span class="timestamp">
-    <%= t "feed_item.posted" %> <%= time_ago_in_words(project.created_at) %> <%= t "feed_item.ago" %> <%= t "feed_item.in" %> <%= link_to project.city, project.user %>.
+    <%= t "feed_item.posted" %> <%= time_ago_in_words(project.created_at) %> <%= t "feed_item.ago" %> <%= t "feed_item.in" %> <%= link_to project.city, projects_path + "?utf8=✓&src=city&search=" + project.city %>.
   </span>
   <% if current_user?(project.user) %>
     <%= link_to t("feed_item.delete"), project, method: :delete,
                                      data: { confirm: t("confirm.sure") },
                                      title: project.content %>
-  <% else %>
-  <%= render 'projects/join_feed_form' if signed_in? %>
   <% end %>
 </li>
